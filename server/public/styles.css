@@ -6,12 +6,16 @@ body {
   margin: 20px;
 }
 
+.icon-custom {
+  width: 40px;
+}
+
 .badge-custom {
   font-size: 24px;
   position: absolute;
   float: right;
-  right: 180px;
-  top: 25px;
+  right: 15px;
+  top: 30px;
 }
 
 @media (max-width: 1199.98px) {
@@ -19,10 +23,7 @@ body {
 }
 
 @media (max-width: 991.98px) {
-  .badge-custom {
-    right: 80px;
-    top: 25px;
-  }
+
 }
 
 @media (max-width: 767.98px) {
@@ -35,8 +36,7 @@ body {
   }
 
   .badge-custom {
-    font-size: 20px;
-    right: 115px;
+    font-size: 18px;
     top: 25px;
   }
 }
@@ -52,7 +52,6 @@ body {
 
   .badge-custom {
     font-size: 15px;
-    right: 18px;
     top: 15px;
   }
 }

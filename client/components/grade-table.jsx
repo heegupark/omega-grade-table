@@ -14,52 +14,45 @@ function Grade(props) {
 function GradeTable(props) {
   return props.grades.length
     ? (
-      <div className="container">
-        <h1 className="title">Student Grade Table</h1>
-        <h4 className="badge-custom">Average Grade <span className="badge badge-secondary">{props.avg}</span></h4>
-        <table className="table col-sm">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="col-sm">Studen Name</th>
-              <th scope="col-sm">Course</th>
-              <th scope="col-sm">Grade</th>
-            </tr>
-          </thead>
-          <tbody className="table-striped">
-            {
-              props.grades.map(grade => {
-                return (
-                  <Grade
-                    key={grade.id}
-                    name={grade.name}
-                    course={grade.course}
-                    grade={grade.grade}
-                  />
-                );
-              })
-            }
-          </tbody>
-        </table>
-      </div>
+      <table className="table col-sm">
+        <thead className="thead-dark">
+          <tr>
+            <th scope="col-sm">Studen Name</th>
+            <th scope="col-sm">Course</th>
+            <th scope="col-sm">Grade</th>
+          </tr>
+        </thead>
+        <tbody className="table-striped">
+          {
+            props.grades.map(grade => {
+              return (
+                <Grade
+                  key={grade.id}
+                  name={grade.name}
+                  course={grade.course}
+                  grade={grade.grade}
+                />
+              );
+            })
+          }
+        </tbody>
+      </table>
     )
     : (
-      <div className="container">
-        <h1 className="title">Student Grade Table</h1>
-        <table className="table col-sm">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="col-sm">Studen Name</th>
-              <th scope="col-sm">Course</th>
-              <th scope="col-sm">Grade</th>
-            </tr>
-          </thead>
-          <tbody className="table-striped">
-            <tr>
-              <td>No data is found</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table className="table col-sm">
+        <thead className="thead-dark">
+          <tr>
+            <th scope="col-sm">Studen Name</th>
+            <th scope="col-sm">Course</th>
+            <th scope="col-sm">Grade</th>
+          </tr>
+        </thead>
+        <tbody className="table-striped">
+          <tr>
+            <td>No data is found</td>
+          </tr>
+        </tbody>
+      </table>
     );
 
 }
