@@ -16,6 +16,7 @@ function GradeTable(props) {
     ? (
       <div className="container">
         <h1 className="title">Student Grade Table</h1>
+        <h4 className="badge-custom">Average Grade <span className="badge badge-secondary">{props.avg}</span></h4>
         <table className="table col-sm">
           <thead className="thead-dark">
             <tr>
