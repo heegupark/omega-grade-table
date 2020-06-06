@@ -1,12 +1,15 @@
 import React from 'react';
 
 function Grade(props) {
-  const { id, name, course, grade } = props;
+  const { id, name, course, grade, handleDelete } = props;
   return (
     <tr key={id}>
       <th scope="row">{name}</th>
       <td>{course}</td>
       <td>{grade}</td>
+      <td><button
+        onClick={() => handleDelete(id)}
+        className="btn btn-danger">Delete</button></td>
     </tr>
   );
 }
@@ -20,6 +23,7 @@ function GradeTable(props) {
             <th scope="col-sm">Studen Name</th>
             <th scope="col-sm">Course</th>
             <th scope="col-sm">Grade</th>
+            <th scope="col-sm">Operations</th>
           </tr>
         </thead>
         <tbody className="table-striped">
@@ -28,9 +32,11 @@ function GradeTable(props) {
               return (
                 <Grade
                   key={grade.id}
+                  id={grade.id}
                   name={grade.name}
                   course={grade.course}
                   grade={grade.grade}
+                  handleDelete={props.handleDelete}
                 />
               );
             })
@@ -45,6 +51,7 @@ function GradeTable(props) {
             <th scope="col-sm">Studen Name</th>
             <th scope="col-sm">Course</th>
             <th scope="col-sm">Grade</th>
+            <th scope="col-sm">Operations</th>
           </tr>
         </thead>
         <tbody className="table-striped">

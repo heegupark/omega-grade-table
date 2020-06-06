@@ -17,18 +17,6 @@
       "name": "Douglas Crockford",
       "course": "JavaScript",
       "grade": 100
-    },
-    {
-      "name": "Heegu",
-      "course": "Web Development",
-      "grade": "77",
-      "id": 33
-    },
-    {
-      "name": "James",
-      "course": "Full Stack",
-      "grade": "88",
-      "id": 34
     }
   ]
 }
