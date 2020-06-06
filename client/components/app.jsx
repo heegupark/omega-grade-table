@@ -1,5 +1,6 @@
 import React from 'react';
 import GradeTable from './grade-table';
+import Header from './header';
 
 class App extends React.Component {
   constructor(props) {
@@ -31,10 +32,16 @@ class App extends React.Component {
   }
 
   render() {
-    return <GradeTable
-      grades={this.state.grades}
-      avg={this.getAverageGrade()}
-    />;
+    return (
+      <Header
+        grades={this.state.grades}
+        avg={this.getAverageGrade()}
+      />,
+      <GradeTable
+        grades={this.state.grades}
+        avg={this.getAverageGrade()}
+      />
+    );
   }
 }
 
