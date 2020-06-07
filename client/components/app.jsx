@@ -7,11 +7,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      grades: []
+      grades: [],
+      isUpdate: false
     };
     this.addGrade = this.addGrade.bind(this);
     this.getAverageGrade = this.getAverageGrade.bind(this);
     this.deleteGrade = this.deleteGrade.bind(this);
+    this.updateCompleteGrade = this.updateCompleteGrade.bind(this);
   }
 
   componentDidMount() {
@@ -68,6 +70,35 @@ class App extends React.Component {
       .catch(err => console.error(err.message));
   }
 
+  updateCompleteGrade(updatedGrade) {
+    fetch(`/api/grades/${updatedGrade.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id: updatedGrade.id,
+        name: updatedGrade.name,
+        course: updatedGrade.course,
+        grade: Number(updatedGrade.grade)
+      })
+    })
+      .then(res => res.json())
+      .then(() => {
+        this.setState(({ grades }) => ({
+          grades: grades.filter(grade => {
+            if (grade.id === updatedGrade.id) {
+              grade.name = updatedGrade.name;
+              grade.course = updatedGrade.course;
+              grade.grade = updatedGrade.grade;
+            }
+            return true;
+          })
+        }));
+      })
+      .catch(err => console.error(err.message));
+  }
+
   render() {
     return (
       <div className="container">
@@ -80,13 +111,14 @@ class App extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-sm-8">
+          <div className="col-table-custom">
             <GradeTable
               grades={this.state.grades}
+              handleUpdateGrade={this.updateCompleteGrade}
               handleDelete={this.deleteGrade}
             />
           </div>
-          <div className="col-sm-4">
+          <div className="col-form-custom">
             <GradeForm onSubmit={this.addGrade} />
           </div>
         </div>
