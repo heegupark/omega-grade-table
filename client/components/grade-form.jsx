@@ -97,9 +97,9 @@ class GradeForm extends Component {
             placeholder="Grade"
             onChange={this.handleGradeChange} />
         </div>
-        <div className="text-right">
-          <button type="submit" className="ml-2 btn btn-primary">Add</button>
-          <button type="button" onClick={this.handleCancel} className="ml-2 btn btn-warning">Cancel</button>
+        <div className="form-btn-box">
+          <button type="submit" className="btn btn-primary form-btn-add">Add</button>
+          <button type="button" onClick={this.handleCancel} className="btn btn-warning form-btn-cancel">Cancel</button>
         </div>
       </form>
     );
