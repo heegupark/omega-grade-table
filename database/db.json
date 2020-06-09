@@ -1,12 +1,6 @@
 {
   "grades": [
     {
-      "id": 5,
-      "name": "Kyle Simpson",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
       "id": 12,
       "name": "Brendan Eich",
       "course": "JavaScript",
@@ -21,8 +15,32 @@
     {
       "name": "James",
       "course": "Java",
-      "grade": 10,
+      "grade": 97,
       "id": 34
+    },
+    {
+      "name": "Harry Potter",
+      "course": "Spell",
+      "grade": "99",
+      "id": 35
+    },
+    {
+      "name": "Henry Ford",
+      "course": "Automobile",
+      "grade": "97",
+      "id": 36
+    },
+    {
+      "name": "Jason Tatum",
+      "course": "Acting",
+      "grade": "98",
+      "id": 37
+    },
+    {
+      "name": "Mike Jordan",
+      "course": "Backetball",
+      "grade": "101",
+      "id": 38
     }
   ]
 }

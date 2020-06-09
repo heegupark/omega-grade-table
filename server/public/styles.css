@@ -2,10 +2,13 @@ body {
   font-family: 'Baloo Bhaina 2', cursive;
 }
 
+.bg {
+  margin-top: 20px;
+  min-height: 88vh;
+}
 .title {
   margin: 20px;
 }
-
 
 .icon-custom {
   width: 40px;
@@ -15,7 +18,7 @@ body {
   font-size: 22px;
   position: absolute;
   float: right;
-  right: 15px;
+  right: 6.3%;
   top: 30px;
 }
 
@@ -28,7 +31,6 @@ body {
   margin: 1%;
 }
 
-
 .col-form-custom {
   margin: 1%;
 }
@@ -37,14 +39,14 @@ body {
   border: none;
   border-bottom: 1px solid #888888;
   border-radius: 2px;
-  width: 90%;
-  background-color: rgba(250, 250, 250, 0.7);
-  margin: -1px;
+  width: 100%;
+  background-color: rgba(250, 250, 250, 0.5);
+  margin: -2px;
 }
 
 .btn-update, .btn-delete, .btn-cancel {
-  width: 50px;
-  font-size: 12px;
+  width: 30px;
+  height: 30px;
   margin: 0px 2px 0px 2px;
   padding: 5px 0px 2px 0px;
 }
@@ -54,10 +56,17 @@ body {
 }
 
 .form-btn-add, .form-btn-cancel {
-  width: 75px;
+  width: 49%;
   font-size: 14px;
-  margin: 0px 2px 0px 2px;
   padding: 5px 0px 2px 0px;
+}
+
+.form-btn-add {
+  margin-right: 1%
+}
+
+.form-btn-cancel {
+  margin-left: 1%;
 }
 
 .td-name {
@@ -80,11 +89,22 @@ body {
   padding-left: 5px;
 }
 
-@media (max-width: 1199.98px) {
+.omega-footer {
+  text-align: center;
+  color: navy;
+}
 
+@media (max-width: 1199.98px) {
+  .badge-box-custom {
+    right: 2.5%;
+  }
 }
 
 @media (max-width: 991.98px) {
+  .badge-box-custom {
+    right: 1.5%;
+  }
+
   .col-table-custom {
     width: 100%;
     margin: 1%;
@@ -98,15 +118,15 @@ body {
   .form-btn-box {
     text-align: center;
   }
-
-  .form-btn-add, .form-btn-cancel {
-    width: 30%;
-  }
 }
 
 @media (max-width: 767.98px) {
-  h1 {
-    margin-top: 10px;
+  html {
+    font-size: 14px;
+  }
+
+  h2 {
+    margin-top: 20px;
     font-size: 32px;
   }
 
@@ -141,7 +161,11 @@ body {
 }
 
 @media (max-width: 575.98px) {
-  h1 {
+  html {
+    font-size: 12px;
+  }
+
+  h2 {
     font-size: 24px;
   }
 
@@ -152,9 +176,5 @@ body {
   .badge-box-custom {
     font-size: 15px;
     top: 15px;
-  }
-
-  .form-btn-add, .form-btn-cancel {
-    width: 47%;
   }
 }

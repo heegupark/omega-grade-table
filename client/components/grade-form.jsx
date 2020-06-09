@@ -59,8 +59,9 @@ class GradeForm extends Component {
 
   render() {
     const { name, course, grade } = this.state;
+    const { handleSubmit, handleNameChange, handleCourseChange, handleGradeChange, handleCancel } = this;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="input-group mb-2">
           <div className="input-group-prepend">
             <i className="input-group-text fa fa-user icon-custom"></i>
@@ -71,7 +72,7 @@ class GradeForm extends Component {
             value={name}
             className="form-control"
             placeholder="Name"
-            onChange={this.handleNameChange} />
+            onChange={handleNameChange} />
         </div>
         <div className="input-group mb-2">
           <div className="input-group-prepend">
@@ -83,7 +84,7 @@ class GradeForm extends Component {
             value={course}
             className="form-control"
             placeholder="Course"
-            onChange={this.handleCourseChange} />
+            onChange={handleCourseChange} />
         </div>
         <div className="input-group mb-2">
           <div className="input-group-prepend">
@@ -95,11 +96,11 @@ class GradeForm extends Component {
             value={grade}
             className="form-control"
             placeholder="Grade"
-            onChange={this.handleGradeChange} />
+            onChange={handleGradeChange} />
         </div>
         <div className="form-btn-box">
           <button type="submit" className="btn btn-primary form-btn-add">Add</button>
-          <button type="button" onClick={this.handleCancel} className="btn btn-warning form-btn-cancel">Cancel</button>
+          <button type="button" onClick={handleCancel} className="btn btn-warning form-btn-cancel">Cancel</button>
         </div>
       </form>
     );

@@ -75,30 +75,30 @@ class Grade extends Component {
       !this.state.isUpdate
         ? (
           <tr key={id}>
-            <th className="td-name">
+            <td className="td-name text-center">
               {this.state.name}
-            </th>
-            <td className="td-course">
+            </td>
+            <td className="td-course text-center">
               {this.state.course}
             </td>
-            <td className="td-grade">
+            <td className="td-grade text-center">
               {this.state.grade}
             </td>
-            <td className="td-operation">
+            <td className="td-operation text-center">
               <button
                 onClick={() => this.handleUpdateStart()}
-                className="btn btn-warning btn-update">Update
+                className="btn btn-outline-warning btn-update mr-2 ml-2"><i className="fas fa-pen"></i>
               </button>
               <button
                 onClick={() => handleDelete(id)}
-                className="btn btn-info btn-delete">Delete
+                className="btn btn-outline-info btn-delete mr-2 ml-2"><i className="far fa-trash-alt"></i>
               </button>
             </td>
           </tr>
         )
         : (
           <tr key={id}>
-            <th className="td-name">
+            <td className="td-name text-center">
               <input
                 autoFocus
                 className="input-custom"
@@ -106,8 +106,8 @@ class Grade extends Component {
                 value={this.state.name}
                 onChange={this.handleNameChange}
               />
-            </th>
-            <td className="td-course">
+            </td>
+            <td className="td-course text-center">
               <input
                 className="input-custom"
                 type="text"
@@ -115,7 +115,7 @@ class Grade extends Component {
                 onChange={this.handleCourseChange}
               />
             </td>
-            <td className="td-grade">
+            <td className="td-grade text-center">
               <input
                 className="input-custom"
                 type="number"
@@ -123,14 +123,14 @@ class Grade extends Component {
                 onChange={this.handleGradeChange}
               />
             </td>
-            <td className="td-operation">
+            <td className="td-operation text-center">
               <button
                 onClick={() => this.handleUpdate(id)}
-                className="btn btn-warning btn-update">Update
+                className="btn btn-danger btn-update mr-2 ml-2"><i className="fas fa-pen"></i>
               </button>
               <button
                 onClick={() => this.handleUpdateCancel(event)}
-                className="btn btn-danger btn-cancel">Cancel
+                className="btn btn-warning btn-cancel mr-2 ml-2"><i className="fa fa-ban"></i>
               </button>
             </td>
           </tr>

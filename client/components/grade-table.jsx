@@ -11,13 +11,13 @@ class GradeTable extends Component {
 
     return this.props.grades.length
       ? (
-        <table className="table table-striped col-sm">
-          <thead className="thead-dark">
+        <table className="table-sm table-hover table-bordered table-striped col-sm">
+          <thead>
             <tr>
-              <th scope="col-sm td-name">Studen Name</th>
-              <th scope="col-sm td-course">Course</th>
-              <th scope="col-sm td-grade">Grade</th>
-              <th scope="col-sm td-operation">Operations</th>
+              <th scope="col-sm td-name" className="text-center">Studen Name</th>
+              <th scope="col-sm td-course" className="text-center">Course</th>
+              <th scope="col-sm td-grade" className="text-center">Grade</th>
+              <th scope="col-sm td-operation" className="text-center">Operations</th>
             </tr>
           </thead>
           <tbody>
@@ -43,10 +43,10 @@ class GradeTable extends Component {
         <table className="table table-striped col-sm">
           <thead className="thead-dark">
             <tr>
-              <th scope="col-sm">Studen Name</th>
-              <th scope="col-sm">Course</th>
-              <th scope="col-sm">Grade</th>
-              <th scope="col-sm">Operations</th>
+              <th scope="col-sm" className="text-center">Studen Name</th>
+              <th scope="col-sm" className="text-center">Course</th>
+              <th scope="col-sm" className="text-center">Grade</th>
+              <th scope="col-sm" className="text-center">Operations</th>
             </tr>
           </thead>
           <tbody>

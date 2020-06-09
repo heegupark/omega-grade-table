@@ -5,10 +5,11 @@ const dbPath = path.resolve(__dirname, '../database/db.json');
 const server = jsonServer.create();
 const middleware = jsonServer.defaults();
 const endpoints = jsonServer.router(dbPath);
+const PORT = 3021;
 
 server.use(middleware);
 server.use('/api', endpoints);
-server.listen(3001, () => {
+server.listen(PORT, () => {
   // eslint-disable-next-line no-console
-  console.log('JSON Server listening on port 3001\n');
+  console.log(`JSON Server listening on port ${PORT}\n`);
 });
