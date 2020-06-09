@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   getGrades() {
-    fetch('https://ogt.heegu.net:3021/api/grades')
+    fetch('http://ogt.heegu.net:3021/api/grades')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -37,7 +37,7 @@ class App extends React.Component {
   }
 
   addGrade(newGrade) {
-    fetch('https://ogt.heegu.net:3021/api/grades', {
+    fetch('http://ogt.heegu.net:3021/api/grades', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ class App extends React.Component {
   }
 
   deleteGrade(id) {
-    fetch(`https://ogt.heegu.net:3021/api/grades/${id}`, {
+    fetch(`http://ogt.heegu.net:3021/api/grades/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
@@ -71,7 +71,7 @@ class App extends React.Component {
   }
 
   updateCompleteGrade(updatedGrade) {
-    fetch(`https://ogt.heegu.net:3021/api/grades/${updatedGrade.id}`, {
+    fetch(`http://ogt.heegu.net:3021/api/grades/${updatedGrade.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
