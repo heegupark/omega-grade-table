@@ -32,12 +32,12 @@
 ## Screen shot
 [Desktop - Chrome browser]
 
-![Omega Grade Table](https://github.com/heegupark/api-hackathon/blob/master/city-ss-001.gif)
+![Omega Grade Table](https://github.com/heegupark/sgt-react/blob/master/ogt-ss-001.gif)
 
 [iPhone 6/7/8 - Portrait]
 
-![Omega Grade Table](https://github.com/heegupark/api-hackathon/blob/master/city-ss-002.gif)
+![Omega Grade Table](https://github.com/heegupark/sgt-react/blob/master/ogt-ss-002.gif)
 
-[Omega Grade Table]
+[iPhone 6/7/8 - Landscape]
 
-![City-verything](https://github.com/heegupark/api-hackathon/blob/master/city-ss-003.gif)
+![Omega Grade Table](https://github.com/heegupark/sgt-react/blob/master/ogt-ss-003.gif)
