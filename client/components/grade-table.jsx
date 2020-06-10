@@ -11,8 +11,8 @@ class GradeTable extends Component {
 
     return this.props.grades.length
       ? (
-        <table className="table-sm table-hover table-bordered table-striped col-sm">
-          <thead>
+        <table className="table table-hover table-bordered table-striped col-sm">
+          <thead className="thead-dark">
             <tr>
               <th scope="col-sm td-name" className="text-center">Studen Name</th>
               <th scope="col-sm td-course" className="text-center">Course</th>
