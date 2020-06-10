@@ -75,13 +75,13 @@ class Grade extends Component {
       !this.state.isUpdate
         ? (
           <tr key={id}>
-            <td className="td-name text-center">
+            <td className="td-name">
               {this.state.name}
             </td>
-            <td className="td-course text-center">
+            <td className="td-course">
               {this.state.course}
             </td>
-            <td className="td-grade text-center">
+            <td className="td-grade">
               {this.state.grade}
             </td>
             <td className="td-operation text-center">
@@ -98,7 +98,7 @@ class Grade extends Component {
         )
         : (
           <tr key={id}>
-            <td className="td-name text-center">
+            <td className="td-name">
               <input
                 autoFocus
                 className="input-custom"
@@ -107,7 +107,7 @@ class Grade extends Component {
                 onChange={this.handleNameChange}
               />
             </td>
-            <td className="td-course text-center">
+            <td className="td-course">
               <input
                 className="input-custom"
                 type="text"
@@ -115,7 +115,7 @@ class Grade extends Component {
                 onChange={this.handleCourseChange}
               />
             </td>
-            <td className="td-grade text-center">
+            <td className="td-grade">
               <input
                 className="input-custom"
                 type="number"
