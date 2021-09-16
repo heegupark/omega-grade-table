@@ -7,7 +7,7 @@ const dbPath = path.resolve(__dirname, '../database/db.json');
 const server = jsonServer.create();
 const middleware = jsonServer.defaults();
 const endpoints = jsonServer.router(dbPath);
-const PORT = 3021;
+const PORT = 3000;
 
 server.use(middleware);
 server.use('/api', endpoints);
